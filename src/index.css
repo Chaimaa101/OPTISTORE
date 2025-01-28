@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  @apply block
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  opacity: 0.6;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: black !important;
+  /*Change to match your theme */
+  opacity: 1;
+  transform: scale(1.4);
+  /* Enlarge the active bullet */
+}
+
+.custom-bullet {
+  border-radius: 500px;
+  /* Ensures the bullet is perfectly round */
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border: 1px solid rgb(219, 219, 219);
+  background-color: white;
+  border-radius: 50%;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 16px !important;
+  font-weight: bold;
+  color: #041d34;
+  line-height: 0 !important;
+}
