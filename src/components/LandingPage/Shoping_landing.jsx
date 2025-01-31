@@ -14,7 +14,7 @@ export default function Shoping_landing() {
   const glasses = [
     {
       id: 1,
-      img: "../../public/shoping_landing/1.jpg",
+      img: "/shoping_landing/1.jpg",
       title: "WAYFARRER BROWN LENSES",
       preprice: "299",
       price: "149",
@@ -22,7 +22,7 @@ export default function Shoping_landing() {
     },
     {
       id: 2,
-      img: "../../public/shoping_landing/2.jpg",
+      img: "/shoping_landing/2.jpg",
       title: "HALO DAY AND NIGHT 3EN1",
       preprice: "399",
       price: "149",
@@ -30,7 +30,7 @@ export default function Shoping_landing() {
     },
     {
       id: 3,
-      img: "../../public/shoping_landing/3.jpg",
+      img: "/shoping_landing/3.jpg",
       title: "CAIRO DAY AND NIGHT 3EN1",
       preprice: "299",
       price: "159",
@@ -38,7 +38,7 @@ export default function Shoping_landing() {
     },
     {
       id: 4,
-      img: "../../public/shoping_landing/4.jpg",
+      img: "/shoping_landing/4.jpg",
       title: "SILVA 2EN1 SILVER FRAME",
       preprice: "349",
       price: "149",
@@ -46,7 +46,7 @@ export default function Shoping_landing() {
     },
     {
       id: 5,
-      img: "../../public/shoping_landing/5.jpg",
+      img: "/shoping_landing/5.jpg",
       title: "VIORA TIGRED 2EN1",
       preprice: "150",
       price: "142.5",
@@ -54,7 +54,7 @@ export default function Shoping_landing() {
     },
     {
       id: 6,
-      img: "../../public/shoping_landing/6.jpg",
+      img: "/shoping_landing/6.jpg",
       title: "MOSCOT SAYNO GREY",
       preprice: "200",
       price: "180",
@@ -62,7 +62,7 @@ export default function Shoping_landing() {
     },
     {
       id: 7,
-      img: "../../public/shoping_landing/7.jpg",
+      img: "/shoping_landing/7.jpg",
       title: "GUCCI ARYO TRANS 2EN1 CLIPS",
       preprice: "200",
       price: "100",
@@ -70,7 +70,7 @@ export default function Shoping_landing() {
     },
     {
       id: 8,
-      img: "../../public/shoping_landing/8.jpg",
+      img: "/shoping_landing/8.jpg",
       title: "POLICE CIRKO CLIPS 2EN1",
       preprice: "299",
       price: "254.15",
@@ -78,7 +78,7 @@ export default function Shoping_landing() {
     },
     {
       id: 9,
-      img: "../../public/shoping_landing/9.jpg",
+      img: "/shoping_landing/9.jpg",
       title: "MOSCOT SANYO BLACK",
       preprice: "300",
       price: "270",

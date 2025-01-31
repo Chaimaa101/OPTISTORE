@@ -1,5 +1,5 @@
 import Stick from "../common/Stick";
-import Navigation from "../common/Navigation";
+import Nav from "../common/Nav";
 import Hero from "../components/LandingPage/Hero";
 import Info from "../components/LandingPage/Info";
 import Shoping_landing from "../components/LandingPage/Shoping_landing";
@@ -10,11 +10,12 @@ import Collaboration from "../components/LandingPage/Collaboration";
 import Instagram from "../components/LandingPage/Instagram";
 import SignIn from "../components/LandingPage/SignIn";
 import Footer from "../common/Footer";
-const LandingPage = () => {
+
+const HomePage = () => {
   return (
     <>
       <Stick />
-      <Navigation />
+      <Nav />
       <Hero />
       <Info />
       <Shoping_landing />
@@ -28,4 +29,4 @@ const LandingPage = () => {
     </>
   );
 };
-export default LandingPage;
+export default HomePage;

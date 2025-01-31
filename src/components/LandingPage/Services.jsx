@@ -42,7 +42,7 @@ export default function Services() {
       <div className="rounded-xl overflow-hidden">
         <img
           className="w-full object-cover h-full"
-          src="../../public/services_img.webp"
+          src="/public/services_img.webp"
           alt=""
         />
       </div>

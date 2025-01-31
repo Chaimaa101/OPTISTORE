@@ -15,23 +15,23 @@ const Collections = () => {
         {[
           {
             title: "Men's Sunglasses",
-            image: "../../categories/sunglassesMan.jpg",
+            image: "/categories/sunglassesMan.jpg",
           },
           {
             title: "Women's Sunglasses",
-            image: "../../categories/woman-sunglasses.jpg",
+            image: "/categories/woman-sunglasses.jpg",
           },
           {
             title: "Accessories",
-            image: "../../categories/accessoires.jpg",
+            image: "/categories/accessoires.jpg",
           },
           {
             title: "Men's Eyeglasses",
-            image: "../../categories/eyeglassesman.jpg",
+            image: "/categories/eyeglassesman.jpg",
           },
           {
             title: "Women's eyeglasses",
-            image: "../../categories/eyeglasses.jpg",
+            image: "/categories/eyeglasses.jpg",
           },
         ].map((collection, index) => (
           <div
