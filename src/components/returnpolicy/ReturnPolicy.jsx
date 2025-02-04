@@ -1,7 +1,7 @@
 const ReturnPolicy = () => {
   return (
     <>
-      <div className="container mx-auto px-4 py-16 text-gray-900">
+      <div  className="container mx-auto px-4 py-16 text-gray-900">
         <h1 className="text-4xl uppercase font-bold italic text-center text-stick my-12">
           Return Policy
         </h1>

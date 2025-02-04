@@ -6,26 +6,13 @@ const Collaboration = () => {
       </h1>
       <div className="container px-4 mx-auto my-10 text-stick flex justify-center items-center gap-5 flex-wrap">
         {[
-          { image: "/colaboration/calvin-klein-logo.png" },
-          { image: "/colaboration/hm-logo-black-and-white.png" },
+          { image: "/public/colaboration/carti-1.png" },
+          { image: "/public/colaboration/oaps.png" },
           {
-            image: "/colaboration/moma-3-logo-black-and-white.png",
+            image: "/public/colaboration/prida-1.png",
           },
           {
-            image:
-              "/colaboration/new-york-red-bulls-logo-black-and-white.png",
-          },
-          {
-            image:
-              "/colaboration/paul-smith-logo-black-and-white.png",
-          },
-          {
-            image:
-              "/colaboration/manchester-united-logo-black-and-white.png",
-          },
-          {
-            image:
-              "/colaboration/ugg-australia-logo-black-and-white.png",
+            image: "/public/colaboration/Raybank-1.png",
           },
         ].map((item, index) => (
           <div key={index}>

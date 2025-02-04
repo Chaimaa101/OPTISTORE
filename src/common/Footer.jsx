@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-  const [curentYear, setCurentYear] = useState(new Date().getFullYear());
+  const [curentYear] = useState(new Date().getFullYear());
+  const event = (e) => {
+    e.scrollTo(0, 0);
+  };
   return (
     <footer className="h-[40vh] flex flex-col justify-center items-center gap-10 text-stick capitalize">
       <div>
@@ -10,16 +13,24 @@ const Footer = () => {
       </div>
       <ul className="flex gap-5 flex-row justify-center  text-sm font-medium">
         <li>
-          <Link to="/about">How we are</Link>
+          <NavLink onClick={event} to="/about">
+            How we are
+          </NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact Us</Link>
+          <NavLink onClick={event} to="/contact">
+            Contact Us
+          </NavLink>
         </li>
         <li>
-          <Link to="/shippingpolicy">Shipping Policy</Link>
+          <NavLink onClick={event} to="/shippingpolicy">
+            Shipping Policy
+          </NavLink>
         </li>
         <li>
-          <Link to="/returnpolicy">Return Policy</Link>
+          <NavLink onClick={event} to="/returnpolicy">
+            Return Policy
+          </NavLink>
         </li>
       </ul>
       <p className="text-xs">© {curentYear} tiwaleye All rights reserved. </p>
