@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Collections = () => {
   const linkClass =
     "relative inline-block text-base text-center font-bold uppercase text-white before:bg-white hover:before:w-full before:content-[''] before:absolute before:left-0 before:bottom-0 before:w-0 before:h-[2px] before:bg-stick before:transition-all before:duration-300";
@@ -16,22 +18,27 @@ const Collections = () => {
           {
             title: "Men's Sunglasses",
             image: "/categories/sunglassesMan.jpg",
+            path: "mensunglasses",
           },
           {
             title: "Women's Sunglasses",
             image: "/categories/woman-sunglasses.jpg",
+            path: "womensunglasses",
           },
           {
             title: "Accessories",
             image: "/categories/accessoires.jpg",
+            path: "accessories",
           },
           {
             title: "Men's Eyeglasses",
             image: "/categories/eyeglassesman.jpg",
+            path: "meneyeglasses",
           },
           {
             title: "Women's eyeglasses",
             image: "/categories/eyeglasses.jpg",
+            path: "womeneyeglasses",
           },
         ].map((collection, index) => (
           <div
@@ -42,11 +49,13 @@ const Collections = () => {
             {/* Overlay */}
             <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-50 transition duration-300"></div>
             {/* Text */}
-            <a href="#"
+            <Link
+              onClick={(e) => e.scrollTo(0, 0)}
+              to={collection.path}
               className={`${linkClass} z-10 group-hover:scale-105 transition-transform duration-300`}
             >
               {collection.title}
-            </a>
+            </Link>
           </div>
         ))}
       </div>

@@ -8,7 +8,6 @@ import Collaboration from "../components/LandingPage/Collaboration";
 import Instagram from "../components/LandingPage/Instagram";
 import SignIn from "../components/LandingPage/SignIn";
 
-
 const HomePage = () => {
   return (
     <>

@@ -1,6 +1,6 @@
 const Collaboration = () => {
   return (
-    <>
+    <div className="container mx-auto px-4">
       <h1 className="text-4xl uppercase font-bold italic text-center my-12">
         featured collaboration
       </h1>
@@ -24,7 +24,7 @@ const Collaboration = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

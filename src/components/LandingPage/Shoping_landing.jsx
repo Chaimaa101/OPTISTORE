@@ -137,13 +137,6 @@ export default function Shoping_landing() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <a
-        href="#"
-        aria-label="View All"
-        className="block mx-auto w-fit py-2 px-6 uppercase mt-4 tracking-wider  bg-stick text-white rounded-full active:scale-90 transition-all duration-300"
-      >
-        View All
-      </a>
     </div>
   );
 }

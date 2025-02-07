@@ -1,7 +1,7 @@
 const SignIn = () => {
   return (
-    <div className="bg-stick text-white w-full h-[40vh] flex justify-center items-center text-center">
-      <div className="flex flex-col gap-y-8  ">
+    <div className="bg-stick text-white w-full h-[40vh] flex justify-center items-center text-center px-4">
+      <div className="flex flex-col gap-y-8 ">
         <h1 className="text-4xl uppercase font-bold italic text-center">
           Sign up
         </h1>

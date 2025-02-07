@@ -6,11 +6,11 @@ import "swiper/css/navigation";
 const Instagram = () => {
   const slides = [
     { id: 1, image: "/instagram/1.jpg" },
-  
+
     { id: 3, image: "/instagram/3.jpg" },
     { id: 4, image: "/instagram/4.jpg" },
     { id: 5, image: "/instagram/5.jpg" },
-    
+
     { id: 8, image: "/instagram/8.jpg" },
     { id: 9, image: "/instagram/9.jpg" },
     { id: 10, image: "/instagram/10.jpg" },
@@ -23,7 +23,7 @@ const Instagram = () => {
   return (
     <div className="container px-4  mx-auto my-10">
       <h1 className="text-4xl uppercase font-bold italic text-center my-12 flex items-center justify-center">
-        <span className="font-extrabold text-5xl">#</span>OPTISTORE ON INSTAGRAM
+        #OPTISTORE ON INSTAGRAM
       </h1>
       <Swiper
         modules={[Navigation]}

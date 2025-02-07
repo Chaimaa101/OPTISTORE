@@ -79,18 +79,18 @@ const Nav = () => {
                   <NavLink
                     onClick={event}
                     className="text-gray-700 hover:text-black"
-                    to="/menSunglasses"
+                    to="/mensunglasses"
                   >
-                    Men's Sunglasses
+                    Men&apos;s Sunglasses
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
                     onClick={event}
                     className="text-gray-700 hover:text-black"
-                    to="/womenSunglasses"
+                    to="/womensunglasses"
                   >
-                    Women's Sunglasses
+                    Women&apos;s Sunglasses
                   </NavLink>
                 </li>
                 <li>
@@ -108,7 +108,7 @@ const Nav = () => {
                     className="text-gray-700 hover:text-black"
                     to="/meneyeglasses"
                   >
-                    Men's Eyeglasses
+                    Men&apos;s Eyeglasses
                   </NavLink>
                 </li>
                 <li>
@@ -117,7 +117,7 @@ const Nav = () => {
                     className="text-gray-700 hover:text-black"
                     to="/womeneyeglasses"
                   >
-                    Women's Eyeglasses
+                    Women&apos;s Eyeglasses
                   </NavLink>
                 </li>
               </ul>
@@ -240,17 +240,17 @@ const Nav = () => {
                 >
                   <NavLink
                     onClick={event}
-                    to="/menSunglasses"
+                    to="/mensunglasses"
                     className="block text-gray-700 hover:text-black"
                   >
-                    Men's Sunglasses
+                    Men&apos;s Sunglasses
                   </NavLink>
                   <NavLink
                     onClick={event}
-                    to="/womenSunglasses"
+                    to="/womensunglasses"
                     className="block text-gray-700 hover:text-black"
                   >
-                    Women's Sunglasses
+                    Women&apos;s Sunglasses
                   </NavLink>
                   <NavLink
                     onClick={event}
@@ -264,14 +264,14 @@ const Nav = () => {
                     to="/meneyeglasses"
                     className="block text-gray-700 hover:text-black"
                   >
-                    Men's Eyeglasses
+                    Men&apos;s Eyeglasses
                   </NavLink>
                   <NavLink
                     onClick={event}
                     to="/womeneyeglasses"
                     className="block text-gray-700 hover:text-black"
                   >
-                    Women's Eyeglasses
+                    Women&apos;s Eyeglasses
                   </NavLink>
                 </div>
               </div>

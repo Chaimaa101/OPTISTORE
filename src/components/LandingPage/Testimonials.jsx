@@ -125,7 +125,7 @@ export default function Testimonials() {
         Hear from Our Happy Customers
       </h1>
       <Swiper
-      className="my-5"
+        className="my-5"
         modules={[Pagination, Autoplay]}
         pagination={{
           clickable: true,
@@ -191,7 +191,7 @@ export default function Testimonials() {
           <SwiperSlide key={index} className="my-5">
             <div className="bg-white shadow-lg rounded-2xl p-6 text-center hover:shadow-xl transition-shadow">
               <p className="text-lg font-medium text-gray-700 mb-6">
-                "{testimonial.quote}"
+                " {testimonial.quote} "
               </p>
               <p className="text-lg font-semibold text-gray-900">
                 {testimonial.name}

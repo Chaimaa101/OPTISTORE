@@ -7,11 +7,11 @@ const Footer = () => {
     e.scrollTo(0, 0);
   };
   return (
-    <footer className="h-[40vh] flex flex-col justify-center items-center gap-10 text-stick capitalize">
+    <footer className="h-[40vh] flex flex-col justify-center items-center gap-5 sm:gap-10 text-stick capitalize px-4">
       <div>
         <img className="max-w-24" src="/public/logo.png" alt="" />
       </div>
-      <ul className="flex gap-5 flex-row justify-center  text-sm font-medium">
+      <ul className="flex gap-3 flex-col items-center justify-center  text-sm font-medium sm:flex-row sm:gap-5">
         <li>
           <NavLink onClick={event} to="/about">
             How we are
@@ -33,7 +33,9 @@ const Footer = () => {
           </NavLink>
         </li>
       </ul>
-      <p className="text-xs">© {curentYear} tiwaleye All rights reserved. </p>
+      <p className="text-xs text-center">
+        © {curentYear} tiwaleye All rights reserved.{" "}
+      </p>
     </footer>
   );
 };
