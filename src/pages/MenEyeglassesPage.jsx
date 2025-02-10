@@ -30,6 +30,7 @@ const MenEyeglassesPage = () => {
   const [colorFilter, setColorFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [priceRange, setPriceRange] = useState(2000);
+  const [category] = useState("meneyeglasses");
 
   // Fetch data from JSON file
   useEffect(() => {
@@ -37,11 +38,11 @@ const MenEyeglassesPage = () => {
       try {
         // Adjust the file path to be absolute
         const response = await fetch("/data/Eyeglasses_man/maneyeglasses.json");
-        
+
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
-  
+
         const data = await response.json();
         setProducts(data);
         setFilteredProducts(data);
@@ -51,10 +52,9 @@ const MenEyeglassesPage = () => {
         setLoading(false);
       }
     };
-  
+
     fetchData();
   }, []);
-  
 
   // Handle filtering and sorting
   useEffect(() => {
@@ -133,6 +133,7 @@ const MenEyeglassesPage = () => {
           <ErrorMessage message={error} />
         ) : (
           <ProductList
+            category={category}
             filteredProducts={filteredProducts}
             sortOption={sortOption}
             setSortOption={setSortOption}

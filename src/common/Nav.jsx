@@ -351,7 +351,7 @@ const Nav = () => {
                         <li className="flex py-6">
                           <div className="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
                             <img
-                              src="../../public/sunglasses_black_1.jpg"
+                              src="../../public/data/Eyeglasses_man/1-1.webp"
                               alt=""
                               className="size-full object-cover"
                             />
@@ -362,7 +362,7 @@ const Nav = () => {
                                 <h3>
                                   <a href="#">Throwback Hip Bag</a>
                                 </h3>
-                                <p className="ml-4">$90.00</p>
+                                <p className="ml-4">90.00DH</p>
                               </div>
                               <p className="mt-1 text-sm text-gray-500">
                                 Salmon
@@ -372,135 +372,7 @@ const Nav = () => {
                               <p className="text-gray-500">Qty 1</p>
                               <button
                                 type="button"
-                                className="font-medium text-indigo-600 hover:text-indigo-500"
-                              >
-                                Remove
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        {/* Example Cart Item */}
-                        <li className="flex py-6">
-                          <div className="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
-                            <img
-                              src="../../public/sunglasses_black_1.jpg"
-                              alt=""
-                              className="size-full object-cover"
-                            />
-                          </div>
-                          <div className="ml-4 flex flex-1 flex-col">
-                            <div>
-                              <div className="flex justify-between text-base font-medium text-gray-900">
-                                <h3>
-                                  <a href="#">Throwback Hip Bag</a>
-                                </h3>
-                                <p className="ml-4">$90.00</p>
-                              </div>
-                              <p className="mt-1 text-sm text-gray-500">
-                                Salmon
-                              </p>
-                            </div>
-                            <div className="flex flex-1 items-end justify-between text-sm">
-                              <p className="text-gray-500">Qty 1</p>
-                              <button
-                                type="button"
-                                className="font-medium text-indigo-600 hover:text-indigo-500"
-                              >
-                                Remove
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        {/* Example Cart Item */}
-                        <li className="flex py-6">
-                          <div className="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
-                            <img
-                              src="../../public/sunglasses_black_1.jpg"
-                              alt=""
-                              className="size-full object-cover"
-                            />
-                          </div>
-                          <div className="ml-4 flex flex-1 flex-col">
-                            <div>
-                              <div className="flex justify-between text-base font-medium text-gray-900">
-                                <h3>
-                                  <a href="#">Throwback Hip Bag</a>
-                                </h3>
-                                <p className="ml-4">$90.00</p>
-                              </div>
-                              <p className="mt-1 text-sm text-gray-500">
-                                Salmon
-                              </p>
-                            </div>
-                            <div className="flex flex-1 items-end justify-between text-sm">
-                              <p className="text-gray-500">Qty 1</p>
-                              <button
-                                type="button"
-                                className="font-medium text-indigo-600 hover:text-indigo-500"
-                              >
-                                Remove
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        {/* Example Cart Item */}
-                        <li className="flex py-6">
-                          <div className="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
-                            <img
-                              src="../../public/sunglasses_black_1.jpg"
-                              alt=""
-                              className="size-full object-cover"
-                            />
-                          </div>
-                          <div className="ml-4 flex flex-1 flex-col">
-                            <div>
-                              <div className="flex justify-between text-base font-medium text-gray-900">
-                                <h3>
-                                  <a href="#">Throwback Hip Bag</a>
-                                </h3>
-                                <p className="ml-4">$90.00</p>
-                              </div>
-                              <p className="mt-1 text-sm text-gray-500">
-                                Salmon
-                              </p>
-                            </div>
-                            <div className="flex flex-1 items-end justify-between text-sm">
-                              <p className="text-gray-500">Qty 1</p>
-                              <button
-                                type="button"
-                                className="font-medium text-indigo-600 hover:text-indigo-500"
-                              >
-                                Remove
-                              </button>
-                            </div>
-                          </div>
-                        </li>
-                        {/* Example Cart Item */}
-                        <li className="flex py-6">
-                          <div className="size-24 shrink-0 overflow-hidden rounded-md border border-gray-200">
-                            <img
-                              src="../../public/sunglasses_black_1.jpg"
-                              alt=""
-                              className="size-full object-cover"
-                            />
-                          </div>
-                          <div className="ml-4 flex flex-1 flex-col">
-                            <div>
-                              <div className="flex justify-between text-base font-medium text-gray-900">
-                                <h3>
-                                  <a href="#">Throwback Hip Bag</a>
-                                </h3>
-                                <p className="ml-4">$90.00</p>
-                              </div>
-                              <p className="mt-1 text-sm text-gray-500">
-                                Salmon
-                              </p>
-                            </div>
-                            <div className="flex flex-1 items-end justify-between text-sm">
-                              <p className="text-gray-500">Qty 1</p>
-                              <button
-                                type="button"
-                                className="font-medium text-indigo-600 hover:text-indigo-500"
+                                className="font-medium text-stick hover:text-stick/50"
                               >
                                 Remove
                               </button>
@@ -516,18 +388,18 @@ const Nav = () => {
                 <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
                   <div className="flex justify-between text-base font-medium text-gray-900">
                     <p>Subtotal</p>
-                    <p>$262.00</p>
+                    <p>262.00DH</p>
                   </div>
                   <p className="mt-0.5 text-sm text-gray-500">
                     Shipping and taxes calculated at checkout.
                   </p>
                   <div className="mt-6">
-                    <a
-                      href="#"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                    <Link
+                      to="/chekout"
+                      className="flex items-center justify-center rounded-md border border-transparent bg-black px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-gray-800"
                     >
                       Checkout
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

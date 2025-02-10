@@ -30,7 +30,7 @@ const WomenEyeglassesPage = () => {
   const [colorFilter, setColorFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [priceRange, setPriceRange] = useState(2000);
-
+  const [category] = useState("womeneyeglasses");
   // Fetch data from JSON file
   useEffect(() => {
     const fetchData = async () => {
@@ -130,6 +130,7 @@ const WomenEyeglassesPage = () => {
           <ErrorMessage message={error} />
         ) : (
           <ProductList
+            category={category}
             filteredProducts={filteredProducts}
             sortOption={sortOption}
             setSortOption={setSortOption}

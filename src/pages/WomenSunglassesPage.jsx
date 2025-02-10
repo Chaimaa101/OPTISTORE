@@ -30,12 +30,15 @@ const WomenSunglassesPage = () => {
   const [colorFilter, setColorFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [priceRange, setPriceRange] = useState(2000);
+  const [category] = useState("womensunglasses");
 
   // Fetch data from JSON file
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("../../public/data/sunglasses_women/womensunglasses.json");
+        const response = await fetch(
+          "../../public/data/sunglasses_women/womensunglasses.json"
+        );
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -128,6 +131,7 @@ const WomenSunglassesPage = () => {
           <ErrorMessage message={error} />
         ) : (
           <ProductList
+            category={category}
             filteredProducts={filteredProducts}
             sortOption={sortOption}
             setSortOption={setSortOption}

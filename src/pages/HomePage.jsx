@@ -1,6 +1,5 @@
 import Hero from "../components/LandingPage/Hero";
 import Info from "../components/LandingPage/Info";
-import Shoping_landing from "../components/LandingPage/Shoping_landing";
 import Services from "../components/LandingPage/Services";
 import Collections from "../components/LandingPage/Collections";
 import Testimonials from "../components/LandingPage/Testimonials";
@@ -13,9 +12,8 @@ const HomePage = () => {
     <>
       <Hero />
       <Info />
-      <Shoping_landing />
-      <Services />
       <Collections />
+      <Services />
       <Testimonials />
       <Collaboration />
       <Instagram />

@@ -28,7 +28,8 @@ const AccessoriesPage = () => {
   const [categoryFilter, setCategoryFilter] = useState("");
   const [colorFilter, setColorFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
-  const [priceRange, setPriceRange] = useState(500); // Max price is 500, but it can be changed
+  const [priceRange, setPriceRange] = useState(2000); // Max price is 500, but it can be changed
+  const [category] = useState("accessories");
 
   // Fetch data from JSON file
   useEffect(() => {
@@ -273,7 +274,7 @@ const AccessoriesPage = () => {
               setSearchQuery("");
               setCategoryFilter("");
               setColorFilter("");
-              setPriceRange(500);
+              setPriceRange(2000);
             }}
             className="w-full py-2 px-4 bg-indigo-500 text-white rounded-lg hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all"
           >
@@ -337,7 +338,7 @@ const AccessoriesPage = () => {
           ) : error ? (
             <ErrorMessage message={error} />
           ) : (
-            <Cards filteredItems={filteredProducts} />
+            <Cards filteredItems={filteredProducts} category={category} />
           )}
         </div>
       </div>

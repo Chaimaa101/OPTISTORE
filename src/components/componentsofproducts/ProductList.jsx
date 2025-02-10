@@ -2,7 +2,12 @@
 import Cards from "../cartProducts/Cards";
 
 // eslint-disable-next-line react/prop-types
-const ProductList = ({ filteredProducts, sortOption, setSortOption }) => {
+const ProductList = ({
+  filteredProducts,
+  sortOption,
+  setSortOption,
+  category,
+}) => {
   return (
     <div className="lg:w-3/4">
       <div className="flex justify-between items-center mb-6">
@@ -46,7 +51,7 @@ const ProductList = ({ filteredProducts, sortOption, setSortOption }) => {
           </div>
         </div>
       </div>
-      <Cards filteredItems={filteredProducts} />
+      <Cards filteredItems={filteredProducts} category={category} />
     </div>
   );
 };
