@@ -3,11 +3,11 @@ const SignIn = () => {
     <div className="bg-stick text-white w-full h-[40vh] flex justify-center items-center text-center px-4">
       <div className="flex flex-col gap-y-8 ">
         <h1 className="text-4xl uppercase font-bold italic text-center">
-          Sign up
+          Subscribe now
         </h1>
         <p>
           We deliver all the news that you want to hear. New products, events,
-          and seriously fun stuff about Tiwaleye.
+          and seriously fun stuff about optistore.
         </p>
         <form
           action=""

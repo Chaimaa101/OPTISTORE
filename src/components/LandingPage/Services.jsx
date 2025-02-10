@@ -1,4 +1,5 @@
 import { FaCheck } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   return (
@@ -31,13 +32,13 @@ export default function Services() {
             Free shipping
           </li>
         </ul>
-        <a
-          href="#"
+        <Link
+          to="/womensunglasses"
           aria-label="View All"
           className="w-full text-center py-2 px-6 uppercase mt-4 tracking-wider  bg-stick text-white active:scale-90 transition-all duration-300"
         >
           View All
-        </a>
+        </Link>
       </div>
       <div className="rounded-xl overflow-hidden">
         <img
