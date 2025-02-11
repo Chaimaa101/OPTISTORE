@@ -4,6 +4,7 @@ import {
   BiChevronDown,
   BiChevronUp,
   BiMenu,
+  BiUser,
 } from "react-icons/bi";
 import { Link, NavLink } from "react-router-dom";
 
@@ -130,7 +131,15 @@ const Nav = () => {
           </ul>
 
           {/* Icons (Cart, Flag) */}
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-3">
+            <div className="mb-1">
+              <Link to="/signin">
+                <BiUser
+                  size={26}
+                  className="text-gray-800 hover:text-black transition-colors duration-300"
+                />
+              </Link>
+            </div>
             <div className="relative">
               <div className="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center rounded-full bg-stick text-white text-xs">
                 <span>0</span>
@@ -142,7 +151,7 @@ const Nav = () => {
                 />
               </button>
             </div>
-            <div className="w-6 h-6 rounded-full overflow-hidden border border-gray-300">
+            <div className="w-6 h-6 rounded-full overflow-hidden border border-gray-300 mb-1">
               <img
                 src="/flag.jpeg"
                 alt="Morocco Flag"
@@ -158,6 +167,15 @@ const Nav = () => {
             <img src="/logo.png" alt="OPTISTORE" className="w-24" />
           </NavLink>
           <div className="flex items-center space-x-4">
+            {/* User Menu */}
+            <div className="mb-1">
+              <Link to="/signin">
+                <BiUser
+                  size={26}
+                  className="text-gray-800 hover:text-black transition-colors duration-300"
+                />
+              </Link>
+            </div>
             {/* Cart Icon */}
             <div className="relative">
               <div className="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center rounded-full bg-stick text-white text-xs">
@@ -172,7 +190,7 @@ const Nav = () => {
             </div>
             {/* Hamburger Menu */}
             <button onClick={toggleHamburger}>
-              <BiMenu size={28} className="text-gray-800" />
+              <BiMenu size={32} className="text-gray-800" />
             </button>
           </div>
         </div>

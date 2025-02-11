@@ -23,6 +23,8 @@ import SingleProductAccessories from "../components/SingleProduct/SingleProductA
 import SingleProductManEyeglasses from "../components/SingleProduct/SingleProductManEyeglasses";
 import SingleProductWomenEyeglasses from "../components/SingleProduct/SingleProductWomenEyeglasses";
 import CheckOutPage from "../pages/CheckOutPage";
+import SigninPage from "../pages/SigninPage";
+import RegisterPage from "../pages/RegisterPage";
 
 export const router = createBrowserRouter([
   {
@@ -104,6 +106,16 @@ export const router = createBrowserRouter([
       {
         path: "/chekout",
         element: <CheckOutPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/signin",
+        element: <SigninPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
         errorElement: <ErrorPage />,
       },
     ],

@@ -7,7 +7,7 @@ const Footer = () => {
     e.scrollTo(0, 0);
   };
   return (
-    <footer className="h-[40vh] flex flex-col justify-center items-center gap-5 sm:gap-10 text-stick capitalize px-4">
+    <footer className="my-10 flex flex-col justify-center items-center gap-5 sm:gap-10 text-stick capitalize px-4">
       <div>
         <img className="max-w-24" src="/public/logo.png" alt="" />
       </div>
