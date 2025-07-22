@@ -35,7 +35,6 @@ const ListProducts = () => {
   const { props } = usePage();
   const { products, category } = props;
   
-console.log(products)
   // Handle filtering and sorting
   useEffect(() => {
     let filteredData = [...products];

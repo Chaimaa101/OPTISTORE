@@ -15,35 +15,9 @@ class CartItemController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        $user = Auth::user();
-
-        $cartItems = CartItem::where('user_id', $user->id)
-            ->with(['product' => function ($query) {
-                $query->with('category', 'images');
-            }])
-            ->get();
-
-        return Inertia::render('common/Nav', [
-            'cartItems' => $cartItems->map(function ($item) {
-                return [
-                    'id' => $item->id,
-                    'quantity' => $item->quantity,
-                    'product' => [
-                        'id' => $item->product->id,
-                        'title' => $item->product->title, 
-                        'price' => $item->product->price,
-                        'category' => $item->product->category ? [
-                            'name' => $item->product->category->name
-                        ] : null,
-                        'images' => $item->product->images->isNotEmpty()
-                            ? $item->product->images
-                            : null, // adjust according to your images structure
-                    ]
-                ];
-            })
-        ]);
-    }
+{
+    
+}
 
 
     public function create()

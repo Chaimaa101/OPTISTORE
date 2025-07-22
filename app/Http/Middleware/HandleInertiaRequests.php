@@ -50,7 +50,7 @@ class HandleInertiaRequests extends Middleware
             'cartItems' => function () {
             $user = Auth::user();
             if ($user) {
-                return cartItem::where('user_id', $user->id)->with('product')->get();
+                return cartItem::where('user_id', $user->id)->with(['product','product.images'])->get();
             }
             return [];
         },

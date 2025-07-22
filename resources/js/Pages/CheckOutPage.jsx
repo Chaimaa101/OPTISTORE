@@ -1,6 +1,8 @@
 import { useForm, usePage } from '@inertiajs/react';
 import { FaRegQuestionCircle } from "react-icons/fa";
 import { useState } from "react";
+import AppLayout from '@/Pages/AppLayout';
+
 
 function CheckoutPage() {
   const { cartItems = [], auth } = usePage().props;
@@ -72,7 +74,7 @@ function CheckoutPage() {
               <div key={item.id} className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <img
-                    src={`/storage/${item.product.image}`}
+                    src={`/${item.product.images[0].images[0]}`}
                     alt={item.product.title}
                     className="w-20 h-20 object-cover rounded-lg"
                   />
@@ -277,5 +279,6 @@ function CheckoutPage() {
     </div>
   );
 }
+CheckoutPage.layout = page => <AppLayout>{page}</AppLayout>;
 
 export default CheckoutPage;

@@ -21,11 +21,5 @@ class productImage extends Model
         return $this->belongsTo(Product::class);
     }
     
-    // Helper method to get full image URLs
-    public function getImageUrlsAttribute()
-    {
-        return array_map(function($path) {
-            return asset($path);
-        }, $this->images ?? []);
-    }
+   
 }

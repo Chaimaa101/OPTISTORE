@@ -25,7 +25,6 @@ function SingleProductPage() {
 
     // Get all images from the first images record (if exists)
     const availableImages = product?.images[0]?.images || [];
-    console.log(product?.images[0]?.images[0] || [])
 
     const handleAddToCart = (e) => {
         e.preventDefault();
