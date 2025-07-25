@@ -95,11 +95,11 @@ class OrderController extends Controller
                 $payment->update(['status' => 'completed']);
             }
 
-            return redirect("/homeUser")->withErrors("error passing order")->withInput();
+            return redirect("/homeUser")->with('success', 'Order created successfully!');
         });
     }
     public function destroy(Order $order){
          $order->delete();
-        return back()->withErrors("error delete order")->withInput();
+        return back()->with("success", "Order deleted successfully");
     }
 }

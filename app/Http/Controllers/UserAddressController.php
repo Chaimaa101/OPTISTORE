@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\userAddress;
 use App\Http\Requests\StoreuserAddressRequest;
 use App\Http\Requests\UpdateuserAddressRequest;
+use Illuminate\Http\Request;
 
 class UserAddressController extends Controller
 {
@@ -27,7 +28,7 @@ class UserAddressController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreuserAddressRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -51,7 +52,7 @@ class UserAddressController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateuserAddressRequest $request, userAddress $userAddress)
+    public function update(Request $request, userAddress $userAddress)
     {
         //
     }

@@ -91,10 +91,8 @@ public function index($id)
             'images' => $imagePaths
         ]);
     }
-        return response()->json([
-            'message' => 'Product created successfully!',
-            'product' => $product,
-        ], 201);
+        return redirect()->back()
+                ->with('success', 'Product created successfully!');
     }
 
     /**
@@ -143,7 +141,8 @@ public function index($id)
 
     $product->update($validatedData);
 
-    return back();
+    return redirect()->back()
+                ->with('success', 'Product updated successfully!');
 }
 
     /**
@@ -152,6 +151,7 @@ public function index($id)
     public function destroy(Product $product)
     {
         $product->delete();
-        return back()->withErrors("error passing order")->withInput();
+        return redirect()->back()
+                ->with('success', 'Product deleted successfully!');
     }
 }
