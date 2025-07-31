@@ -15,6 +15,7 @@ use App\Models\userAddress;
 use Faker\Provider\ar_EG\Payment;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,12 +25,24 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         User::factory(20)->create();
-        OrderItem::factory(10)->create();
-        // Payment::factory(10)->create();
+ User::factory()->create([
+        'firstname' => 'Admin',
+        'lastname' => 'User',
+        'email' => 'admin@gmail.com',
+        'password' => Hash::make('admin123'),
+        'userType' => 'admin', 
+    ]);
+    User::factory()->create([
+        'firstname' => 'Normal',
+        'lastname' => 'User',
+        'email' => 'user@gmail.com',
+        'password' => Hash::make('user123'),
+        'userType' => 'user', 
+    ]);
+        OrderItem::factory(10)->create();   
         userAddress::factory(10)->create();
-       
         Order::factory(5)->create();
-        // cartItem::factory(15)->create();
+    
         brand::factory(20)->create();
        
         Product::factory()

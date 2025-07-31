@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('product_images', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained()->cascadeOnDelete();
-            $table->json('images');
+            $table->json('images')->default("/storage/data/placeholder.jpg");
             $table->unsignedTinyInteger('image_count')->default(0);
             $table->timestamps();
         });

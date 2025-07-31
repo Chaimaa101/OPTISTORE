@@ -27,9 +27,6 @@ const Nav = () => {
         setShowLogoutConfirm(true);
         setShowUserProfile(false);
     };
-    console.log(cartItems)
-    console.log(cartItems[1].product.images[0].images[0])
-
 
     const confirmLogout = () => {
         router.post("/logout");
@@ -505,7 +502,7 @@ const Nav = () => {
                                                                     .images ? (
                                                                     <img
                                                                         src={
-                                                                            item.product.images[0].images[0]
+                                                                            item?.product?.images[0]?.images[0]
                                                                         }
                                                                         alt={
                                                                             item

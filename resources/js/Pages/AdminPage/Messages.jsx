@@ -6,10 +6,11 @@ import { MdOutlineEmail, MdOutlinePhone } from "react-icons/md";
 import { FaExclamationCircle } from "react-icons/fa";
 import { HiOutlineSearch } from "react-icons/hi";
 import AdminLayout from './AdminLayout'
+import { router } from "@inertiajs/react";
 
 
 
-export default function Messages( {messages}) {
+export default function Messages({ messages }) {
   const [searchQuery, setSearchQuery] = useState("");
 
   // Handle archive action
@@ -19,7 +20,12 @@ export default function Messages( {messages}) {
 
   // Handle spam action
   const handleSpam = (id) => {
-    setMessages(messages.filter((msg) => msg.id !== id));
+    if (confirm("Are you sure you want to delete this message?")) {
+      router.delete(`/messages/${id}`, {
+        preserveScroll: true,
+      });
+    }
+
   };
 
   // Search logic
@@ -70,13 +76,12 @@ export default function Messages( {messages}) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className={`p-6 border rounded-xl shadow-sm transition-all hover:shadow-md ${
-                msg.priority === "High"
+              className={`p-6 border rounded-xl shadow-sm transition-all hover:shadow-md ${msg.priority === "High"
                   ? "bg-red-50 border-red-200"
                   : msg.priority === "Medium"
-                  ? "bg-yellow-50 border-yellow-200"
-                  : "bg-green-50 border-green-200"
-              }`}
+                    ? "bg-yellow-50 border-yellow-200"
+                    : "bg-green-50 border-green-200"
+                }`}
             >
               {/* Header Section */}
               <div className="flex justify-between items-center">
@@ -84,13 +89,12 @@ export default function Messages( {messages}) {
                   {msg.title}
                 </h3>
                 <span
-                  className={`flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full ${
-                    msg.priority === "High"
+                  className={`flex items-center gap-1 text-xs font-medium px-3 py-1 rounded-full ${msg.priority === "High"
                       ? "bg-red-500 text-white"
                       : msg.priority === "Medium"
-                      ? "bg-yellow-500 text-white"
-                      : "bg-green-500 text-white"
-                  }`}
+                        ? "bg-yellow-500 text-white"
+                        : "bg-green-500 text-white"
+                    }`}
                 >
                   <FaExclamationCircle size={12} />
                   {msg.priority}

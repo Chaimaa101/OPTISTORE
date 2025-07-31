@@ -65,6 +65,7 @@ class OrderController extends Controller
                 'address_id' => $address->id,
                 'total_price' => $validated['total_price'],
                 'status' => 'pending',
+                'created_by' => $user ? $user->id : null,
             ]);
 
             // Create order items
@@ -74,7 +75,7 @@ class OrderController extends Controller
                     'product_id' => $item['product_id'],
                     'quantity' => $item['quantity'],
                     'unit_price' => $item['unit_price'],
-                     'created_by' => $user ? $user->id : null,
+                    'created_by' => $user ? $user->id : null,
                 'updated_by' => $user ? $user->id : null,
                 ]);
             }

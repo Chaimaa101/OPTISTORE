@@ -92,7 +92,7 @@ Route::resource('orders', OrderController::class);
 
 
 Route::group(['middleware' => ['auth', EnsureIsAdmin::class]], function () {
-
+    Route::resource('messages', MessageController::class);
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/products',  function () {
         return Inertia::render('AdminPage/Products');
