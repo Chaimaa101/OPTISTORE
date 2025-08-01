@@ -501,9 +501,7 @@ const Nav = () => {
                                                                 {item.product
                                                                     .images ? (
                                                                     <img
-                                                                        src={
-                                                                            item?.product?.images[0]?.images[0]
-                                                                        }
+                                                                        src={`/${item?.product?.images[0]?.images[0]}`}
                                                                         alt={
                                                                             item
                                                                                 .product

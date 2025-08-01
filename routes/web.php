@@ -93,6 +93,9 @@ Route::resource('orders', OrderController::class);
 
 Route::group(['middleware' => ['auth', EnsureIsAdmin::class]], function () {
     Route::resource('messages', MessageController::class);
+      Route::get('/settings', function () {
+        return Inertia::render('AdminPage/Settings');
+    })->name('settings');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/products',  function () {
         return Inertia::render('AdminPage/Products');
@@ -102,9 +105,7 @@ Route::group(['middleware' => ['auth', EnsureIsAdmin::class]], function () {
 
     Route::get('/{id}', [ProductController::class, 'indexAdmin'])
         ->name('products.category');
-    Route::get('/settings', function () {
-        return Inertia::render('AdminPage/Settings');
-    })->name('settings');
+  
 });
 
 

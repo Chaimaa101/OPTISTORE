@@ -1,61 +1,126 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<h1 align="center">
+	<img
+		width="300"
+		alt="OPTISTORE"
+		src="https://github.com/BoukrimYounes/OPTISTORE/blob/master/resources/js/public/icon.png">
+</h1>
+
+<h3 align="center">
+	OPTISTORE– eCommerce application
+</h3>
+
+## 📖 Table of Contents
+<details>
+<summary>Click to expand</summary>
+
+- [📖 Table of Contents](#-table-of-contents)
+- [📷 Demo](#-demo)
+- [⛓ Description](#-description)
+  - [User Authentication](#user-authentication)
+  - [Product & Cart Management](#product--cart-management)
+  - [Admin Panel](#admin-panel)
+  - [Responsive Design](#responsive-design)
+- [🔨 Development](#-development)
+  - [Tech Stack](#tech-stack)
+- [☑️ Installation](#-installation)
+  - [Prerequisites](#prerequisites)
+  - [Backend Setup (Laravel)](#backend-setup-laravel)
+  - [Frontend Setup (React)](#frontend-setup-react)
+- [📦 Usage](#-usage)
+- [🤝 Collaborators](#-collaborators)
+
+</details>
+
+# 📷 Demo
+
+
+# ⛓ Description
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+	<b>OptiStore</b> is a sleek and modern eCommerce platform designed for selling high-quality eyewear. From men’s eyeglasses to women’s sunglasses, users can easily browse by category, add items to their cart, and securely place orders.
 </p>
 
-## About Laravel
+## 1️⃣ User Authentication
+- Registration and login required for placing orders.
+- Authenticated users can browse, add to cart, and proceed to checkout.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 2️⃣ Product & Cart Management
+- View products by category.
+- Add glasses to cart (requires login).
+- View cart, update quantity, remove items.
+- Checkout and view order summary.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 3️⃣ Admin Panel
+- Add, update, and delete products.
+- Manage product categories and stock.
+- View and manage customer orders.
 
-## Learning Laravel
+## 4️⃣ Real-Time Updates
+- When a task’s type/status is updated, the changes are instantly reflected in the dashboards of all assigned users.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 6️⃣ Fully Responsive
+- Designed with Tailwind CSS for a clean, modern look on desktop, tablet, and mobile devices.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# 🔨 Development
 
-## Laravel Sponsors
+## 🛠 Tech Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Backend: [![Laravel](https://img.shields.io/badge/Laravel-11-red?style=flat-square&logo=laravel&logoColor=white)](https://laravel.com/)
+- Frontend: [![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react&logoColor=white)](https://reactjs.org/)
+- Routing & Inertia: [![Inertia.js](https://img.shields.io/badge/Inertia.js-SPA-lightgrey?style=flat-square)](https://inertiajs.com/)
+- Database: [![MySQL](https://img.shields.io/badge/MySQL-Database-orange?style=flat-square&logo=mysql&logoColor=white)](https://www.mysql.com/)
+- Styling: [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-Styling-teal?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+# ☑️ Installation
 
-## Contributing
+## Prerequisites
+- PHP >= 8.2.12
+- Composer
+- Node.js >= 22.13
+- MySQL or compatible database
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Backend Setup (Laravel)
 
-## Code of Conduct
+```bash
+git clone https://github.com/Chaimaa101/OPTISTORE.git
+cd OPTISTORE
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
+```
+## Frontend Setup (React)
+```bash
+cd resources/js
+npm install
+npm run dev
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 📦 Usage
 
-## Security Vulnerabilities
+1. **Register a new account** or **log in** if you already have one.
+2. Browse the product catalog by category.
+3. Add items to your cart and proceed to checkout.
+4. Admin users can access the dashboard to manage:
+- Products
+- Categories
+- Orders
+5. Mobile-friendly and easy to navigate!
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# 🤝 Collaborators
 
-## License
+We collaborated to develop **OPTISTORE**, each contributing to different aspects of the project:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+| Name                | GitHub Profile                                      | Role                                                |
+|-------------------- |---------------------------------------------------- |---------------------------------------------------- |
+| **Younes BOUKRIM**  | [BoukrimYounes](https://github.com/BoukrimYounes)   | UI/UX Designer, Frontend Developer (React)          |
+| **Chaimaa AFKIR**   | [Chaimaa101](https://github.com/Chaimaa101)         | Backend Developer , API Tester                      |
+
+
+
