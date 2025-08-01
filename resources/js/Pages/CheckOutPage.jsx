@@ -74,7 +74,7 @@ function CheckoutPage() {
               <div key={item.id} className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <img
-                    src={`/${item.product.images[0].images[0]}`}
+                    src={`/${item?.product?.images[0]?.images[0]}`}
                     alt={item.product.title}
                     className="w-20 h-20 object-cover rounded-lg"
                   />

@@ -76,7 +76,7 @@ function Orders({orders}) {
                       className="bg-white border-b hover:bg-gray-50 transition-colors duration-200"
                     >
                       
-                      <td className="px-6 py-4"></td>
+                      <td className="px-6 py-4">{order?.user?.firstname} {order?.user?.lastname}</td>
                       <td className="px-6 py-4 truncate">{order.total_price}DH</td>
                       <td className="px-6 py-4 truncate">{order.status}</td>
 

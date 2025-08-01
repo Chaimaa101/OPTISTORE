@@ -68,6 +68,6 @@ class MessageController extends Controller
     public function destroy(Message $message)
     {
          $message->delete();
-        return back()->withErrors("error delete message")->withInput();
+        return back() ->with('success', 'Message deleted successfully!');
     }
 }

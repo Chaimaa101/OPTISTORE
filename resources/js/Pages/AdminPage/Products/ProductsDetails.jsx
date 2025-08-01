@@ -145,9 +145,6 @@ function ProductsDetails() {
         if (confirm("Are you sure you want to delete this product?")) {
             router.delete(`/products/${id}`, {
                 preserveScroll: true,
-                onSuccess: () => {
-                    // No need to reload, Inertia will handle the update
-                },
             });
         }
     };
@@ -267,7 +264,7 @@ function ProductsDetails() {
                                                         <motion.img
                                                             src={
                                                                 product
-                                                                    .images[0]
+                                                                    ?.images[0]?.images[0]
                                                             }
                                                             alt={`Product: ${product.name}`}
                                                             className="w-full h-full object-cover rounded-lg"

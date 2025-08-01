@@ -7,6 +7,7 @@ use App\Models\category;
 use App\Models\Product;
 use App\Models\productImage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 
 class ProductController extends Controller
@@ -123,7 +124,7 @@ public function index($id)
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Product $product)
+   public function update(Request $request, Product $product)
 {
     $validatedData = $request->validate([
         'title' => 'sometimes|string|max:255',
@@ -137,14 +138,71 @@ public function index($id)
         'color' => 'sometimes|string|max:50',
         'category_id' => 'sometimes|exists:categories,id',
         'brand_id' => 'sometimes|exists:brands,id',
+        'images' => 'sometimes|array|max:3',
+        'images.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        'deleted_images' => 'sometimes|array', // For tracking images to delete
+        'deleted_images.*' => 'string' // Paths of images to delete
     ]);
 
+    // Update product details
     $product->update($validatedData);
 
-    return redirect()->back()
-                ->with('success', 'Product updated successfully!');
-}
+    // Handle image updates if new images are provided
+    if ($request->hasFile('images')) {
+        $imagePaths = [];
+        
+        foreach ($request->file('images') as $image) {
+            $path = $image->store('products', 'public');
+            $imagePaths[] = "storage/{$path}";
+        }
 
+        // Get existing images
+        $productImage = $product->images()->first();
+        
+        if ($productImage) {
+            // Merge new images with existing ones (excluding deleted ones)
+            $existingImages = $productImage->images ?? [];
+            
+            // Remove deleted images
+            if ($request->has('deleted_images')) {
+                $existingImages = array_diff($existingImages, $request->input('deleted_images'));
+                
+                // Optional: Delete the actual files from storage
+                foreach ($request->input('deleted_images') as $deletedImage) {
+                    $filePath = str_replace('storage/', '', $deletedImage);
+                    Storage::disk('public')->delete($filePath);
+                }
+            }
+            
+            $updatedImages = array_merge($existingImages, $imagePaths);
+            $productImage->update(['images' => $updatedImages]);
+        } else {
+            // Create new image record if none exists
+            ProductImage::create([
+                'product_id' => $product->id,
+                'images' => $imagePaths
+            ]);
+        }
+    } elseif ($request->has('deleted_images')) {
+        // Handle case where only images are being deleted (no new images uploaded)
+        $productImage = $product->images()->first();
+        if ($productImage) {
+            $existingImages = $productImage->images ?? [];
+            $updatedImages = array_diff($existingImages, $request->input('deleted_images'));
+            
+            // Delete the actual files from storage
+            foreach ($request->input('deleted_images') as $deletedImage) {
+                $filePath = str_replace('storage/', '', $deletedImage);
+                Storage::disk('public')->delete($filePath);
+            }
+            
+            $productImage->update(['images' => $updatedImages]);
+        }
+    }
+
+    return redirect()->back()
+            ->with('success', 'Product updated successfully!');
+}
     /**
      * Remove the specified resource from storage.
      */
